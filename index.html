@@ -13,9 +13,21 @@
             min-height: 100vh;
             background-color: black;
             color: white;
+            display: grid;
+            place-items: center;
+
         }
 
         section {
+            background: rgba(255, 255, 255, .2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        
+        p {
+            font-size: 100px;
 
         }
     </style>
@@ -26,8 +38,25 @@
     <section>
     <h1>contador legal</h1>
     <p>0</p>
-    <button>menos</button>
-    <button>mais</button>        
+    <button onclick="menos()">menos</button>
+    <button onclick="mais()">mais</button>        
     </section>
+    <script>
+          let numero = 0
+
+          function menos() {
+            numero--
+        mostrarNaTela()
+          }
+          function mais() {
+            numero++
+        mostrarNaTela()
+          }
+          function mostrarNaTela() {
+         const p =document.querySelector("p")
+         p.innerText=numero
+        }
+        mostrarNaTela()
+    </script>
 </body>
 </html>
